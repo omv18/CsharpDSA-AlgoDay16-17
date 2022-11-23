@@ -40,6 +40,11 @@ namespace CsharpDSA_AlgoDay
                         Regex regex = new Regex();
                         regex.ReplaceWord();
                         break;
+                    case 4:
+                        PrimeRangeAngramPalindrome prime = new PrimeRangeAngramPalindrome();
+                        prime.PrimeRange(1000);
+                        prime.DisplayPime();
+                        break;
                     default:
                         flag = false;
                         break;
