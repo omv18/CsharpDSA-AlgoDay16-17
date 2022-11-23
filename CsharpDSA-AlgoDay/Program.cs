@@ -12,7 +12,7 @@ namespace CsharpDSA_AlgoDay
             bool flag = true;
             while (flag)
             {
-                Console.Write("Enter : 1.Sorting Algo 2.BinarySearchWords : ");
+                Console.Write("Enter : 1.Sorting Algo 2.BinarySearchWords 3.Regex operation : ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -35,6 +35,10 @@ namespace CsharpDSA_AlgoDay
                         BinarySearchWord binarySearchWord = new BinarySearchWord();
                         binarySearchWord.ReadFileText(binaryFilePath);
                         binarySearchWord.BinarySearch("problem");
+                        break;
+                    case 3:
+                        Regex regex = new Regex();
+                        regex.ReplaceWord();
                         break;
                     default:
                         flag = false;
