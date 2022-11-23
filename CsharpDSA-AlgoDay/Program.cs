@@ -12,7 +12,7 @@ namespace CsharpDSA_AlgoDay
             bool flag = true;
             while (flag)
             {
-                Console.Write("Enter : 1.Sorting Algo 2.BinarySearchWords 3.Regex operation : ");
+                Console.Write("Enter : 1.Sorting Algo 2.BinarySearchWords 3.Regex operation 4.Prime Number 5.Anagram : ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -44,6 +44,10 @@ namespace CsharpDSA_AlgoDay
                         PrimeRangeAngramPalindrome prime = new PrimeRangeAngramPalindrome();
                         prime.PrimeRange(1000);
                         prime.DisplayPime();
+                        break;
+                    case 5:
+                        AnagramProblem anagramProblem = new AnagramProblem();
+                        anagramProblem.AnagramCheck("earth", "haert");
                         break;
                     default:
                         flag = false;

@@ -31,10 +31,25 @@ namespace CsharpDSA_AlgoDay.Algo_Prob
             int value = 2;
             while(range != value)
             {
-                if(CheckPrime(value))
-                    arrayList.Add(value);
+                if (CheckPrime(value))
+                {
+                    if(Palindrome(value)) arrayList.Add(value);
+                }
                 value++;
             }
+        }
+        public bool Palindrome(int value)
+        {
+            int originalCopy = value;
+            int duplicateCopy = 0;
+            while(value != 0)
+            {
+                int remainder = value % 10;
+                duplicateCopy = duplicateCopy * 10 + remainder;
+                value = value / 10;
+            }
+            if (duplicateCopy == originalCopy) return true;
+            else return false;
         }
         public void DisplayPime()
         {
@@ -42,6 +57,7 @@ namespace CsharpDSA_AlgoDay.Algo_Prob
             {
                 Console.Write(data + " ");
             }
+            Console.WriteLine();
         }
     }
 }
