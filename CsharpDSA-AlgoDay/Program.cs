@@ -1,16 +1,18 @@
 ﻿using System;
+using CsharpDSA_AlgoDay.Algo_Prob;
 using CsharpDSA_AlgoDay.SortAlgo;
 
 namespace CsharpDSA_AlgoDay
 {
     class Program
     {
+        static string binaryFilePath = @"D:\BridgeLabz\DS\CsharpDSA-AlgoDay16-17\CsharpDSA-AlgoDay\Algo-Prob\BinarySearchProblem.txt";
         public static void Main(string[] args)
         {
             bool flag = true;
             while (flag)
             {
-                Console.Write("Enter : 1.Sorting Algo");
+                Console.Write("Enter : 1.Sorting Algo 2.BinarySearchWords : ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -28,6 +30,11 @@ namespace CsharpDSA_AlgoDay
                         display.Print(arr);
                         display.Print(arr1);
                         display.Print(arr2);
+                        break;
+                    case 2:
+                        BinarySearchWord binarySearchWord = new BinarySearchWord();
+                        binarySearchWord.ReadFileText(binaryFilePath);
+                        binarySearchWord.BinarySearch("problem");
                         break;
                     default:
                         flag = false;
