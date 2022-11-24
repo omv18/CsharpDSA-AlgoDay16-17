@@ -9,6 +9,7 @@ namespace CsharpDSA_AlgoDay
     class Program
     {
         static string binaryFilePath = @"D:\BridgeLabz\DS\CsharpDSA-AlgoDay16-17\CsharpDSA-AlgoDay\Algo-Prob\BinarySearchProblem.txt";
+        static string orderFilePath = @"D:\BridgeLabz\DS\CsharpDSA-AlgoDay16-17\CsharpDSA-AlgoDay\DSP\LL\OrderList.txt";
         public static void Main(string[] args)
         {
             Console.Write("1.Algorithum Program 2. DSP : ");
@@ -66,13 +67,17 @@ namespace CsharpDSA_AlgoDay
                 bool flag = true;
                 while (flag)
                 {
-                    Console.Write("Enter : 1.Unsorted : ");
+                    Console.Write("Enter : 1.Unsorted 2.OrderList : ");
                     int option = Convert.ToInt32(Console.ReadLine());
                     switch (option)
                     {
                         case 1:
                             UnorderList ul = new UnorderList();
                             ul.ReadALlTectFiles(binaryFilePath);
+                            break;
+                        case 2:
+                            OrderList od = new OrderList();
+                            od.ReadTextFileSortList(orderFilePath);
                             break;
                         default:
                             flag = false;
