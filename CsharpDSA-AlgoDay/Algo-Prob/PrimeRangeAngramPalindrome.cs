@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,7 @@ namespace CsharpDSA_AlgoDay.Algo_Prob
     internal class PrimeRangeAngramPalindrome
     {
         ArrayList arrayList = new ArrayList();
+
         public bool CheckPrime(int n)
         {
             if (n <= 1)
@@ -26,7 +28,7 @@ namespace CsharpDSA_AlgoDay.Algo_Prob
             return true;
         }
 
-        public void PrimeRange(int range)
+        public void PrimePalindromeRange(int range)
         {
             int value = 2;
             while(range != value)
@@ -51,9 +53,9 @@ namespace CsharpDSA_AlgoDay.Algo_Prob
             if (duplicateCopy == originalCopy) return true;
             else return false;
         }
-        public void DisplayPime()
+        public void DisplayPrime()
         {
-            foreach(var data in arrayList)
+            foreach (var data in arrayList)
             {
                 Console.Write(data + " ");
             }
