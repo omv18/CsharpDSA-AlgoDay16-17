@@ -9,7 +9,8 @@ namespace CsharpDSA_AlgoDay
     class Program
     {
         static string binaryFilePath = @"D:\BridgeLabz\DS\CsharpDSA-AlgoDay16-17\CsharpDSA-AlgoDay\Algo-Prob\BinarySearchProblem.txt";
-        static string orderFilePath = @"D:\BridgeLabz\DS\CsharpDSA-AlgoDay16-17\CsharpDSA-AlgoDay\DSP\LL\OrderList.txt";
+        static string orderFilePath = @"D:\BridgeLabz\DS\CsharpDSA-AlgoDay16-17\CsharpDSA-AlgoDay\DSP\File\OrderList.txt";
+        static string balancedParanthesisFilePath = @"D:\BridgeLabz\DS\CsharpDSA-AlgoDay16-17\CsharpDSA-AlgoDay\DSP\File\BalnceParanthesisFile.txt";
         public static void Main(string[] args)
         {
             Console.Write("1.Algorithum Program 2. DSP : ");
@@ -67,7 +68,7 @@ namespace CsharpDSA_AlgoDay
                 bool flag = true;
                 while (flag)
                 {
-                    Console.Write("Enter : 1.Unsorted 2.OrderList : ");
+                    Console.Write("Enter : 1.Unsorted 2.OrderList 3.Balanced Parentheses: ");
                     int option = Convert.ToInt32(Console.ReadLine());
                     switch (option)
                     {
@@ -78,6 +79,10 @@ namespace CsharpDSA_AlgoDay
                         case 2:
                             OrderList od = new OrderList();
                             od.ReadTextFileSortList(orderFilePath);
+                            break;
+                        case 3:
+                            BalancedParentheses balancedParentheses = new BalancedParentheses();
+                            balancedParentheses.ReadTextFileBalancedParentheses(balancedParanthesisFilePath);
                             break;
                         default:
                             flag = false;
